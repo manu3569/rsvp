@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1>
+    <%= @event.title %>
+  </h1>
+</p>
+
+<p>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date.to_formatted_s(:long_ordinal) %>
+</p>
+
+<p>
+  Hosted by <strong><%= @event.user.name %></strong>
+</p>
+
+<% if @event.invites.any? %>
+<ul>
+  <% @event.invites.each do |invite| %>
+  <li> <%= invite.user.name %> </li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Create Invite', new_event_invite_path(@event) %> |
+<%= link_to 'Back', events_path %>
