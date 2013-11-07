@@ -2,10 +2,6 @@ RsvpApp::Application.routes.draw do
 
   resources :users
 
-  resources :events
-
-  resources :invites
-
   resources :events do
     resources :invites, :only => [:new, :create]
   end
