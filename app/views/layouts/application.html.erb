@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pollywog Ranch</title>
+  <title>RSVP Tool</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <nav>
-      <a href="/ponds">Ponds</a> | 
-      <a href="/frogs">Frogs</a> | 
-      <a href="/tadpoles">Tadpoles</a>
-    </nav>
+  <h1>RSVP Tool</h1>
 
+    <nav>
+      <a href="/users">Users</a> | 
+      <a href="/events">Events</a>
+    </nav>
 <%= yield %>
 
 </body>
